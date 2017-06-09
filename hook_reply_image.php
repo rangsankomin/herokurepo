@@ -11,7 +11,7 @@ if (empty($configs) || empty($configs['channel_token'])) {
   return;
 }
 
-$channel_token = $configs['channel_token'];
+$channel_token = '6818df0cecde4786f6fc177155cc940d:X3LZvU8+/mXKb/sJuuW7IumF/7kV3BYvPG2x+gmeMHGDrNxwzawcUUWS/7Cnm7l94neWZM1M/tAC33QrvZK4HRLz7I3c/gBHkXYui3w2WvhqZWT/qNMl0Qfnxjv4+qtk4S+waflWXYISoJEq3tTEOQdB04t89/1O/w1cDnyilFU=';
 
 
 $body = file_get_contents('php://input');
@@ -41,8 +41,8 @@ foreach ($json['events'] as $event) {
     'messages' => [
       [
         'type' => 'image',
-        'originalContentUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg',
-        'previewImageUrl' => 'https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer_preview.jpg',
+        'originalContentUrl' => 'https://github.com/rangsankomin/herokurepo/blob/master/images/beer.jpg',
+        'previewImageUrl' => 'https://github.com/rangsankomin/herokurepo/blob/master/images/beer_preview.jpg',
       ],
     ]
   ];
