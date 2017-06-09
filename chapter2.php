@@ -7,7 +7,7 @@ $access_token  = 'X3LZvU8+/mXKb/sJuuW7IumF/7kV3BYvPG2x+gmeMHGDrNxwzawcUUWS/7Cnm7
 
 $bot = new BOT_API($channelSecret, $access_token);
 	
-$bot->sendMessageNew('U07e0df350ac24692966e2c82a72e1967', 'สวัสดีรังสรรค์ !!');
+$bot->replyMessageNew('U07e0df350ac24692966e2c82a72e1967', 'สวัสดีรังสรรค์ !!');
 
 if ($bot->isSuccess()) {
     echo 'Succeeded!';
