@@ -1,10 +1,10 @@
 <?php
 
-require_once './vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 //use Symfony\Component\Yaml\Yaml;
 
-setlocale(LC_CTYPE, "en_US.UTF-8");
+//setlocale(LC_CTYPE, "en_US.UTF-8");
 
 /*$configs = Yaml::parse(file_get_contents('./config.yml'));
 if (empty($configs) || empty($configs['channel_token'])) {
