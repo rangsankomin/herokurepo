@@ -7,7 +7,7 @@ $access_token  = 'X3LZvU8+/mXKb/sJuuW7IumF/7kV3BYvPG2x+gmeMHGDrNxwzawcUUWS/7Cnm7
 
 $bot = new BOT_API($channelSecret, $access_token);
 	
-$bot->sendImageNew('U07e0df350ac24692966e2c82a72e1967', 'https://github.com/rangsankomin/herokurepo/blob/master/images/beer.jpg','https://github.com/rangsankomin/herokurepo/blob/master/images/beer_preview.jpg');
+$bot->sendImageNew('U07e0df350ac24692966e2c82a72e1967', 'http://203.157.203.53/image/image04.jpg','http://203.157.203.53/image/image04_pre.jpg');
 
 if ($bot->isSuccess()) {
     echo 'Succeeded!';
