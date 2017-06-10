@@ -7,6 +7,7 @@ use \LINE\LINEBot\HTTPClient;
 use \LINE\LINEBot\HTTPClient\CurlHTTPClient;
 use \LINE\LINEBot\MessageBuilder;
 use \LINE\LINEBot\MessageBuilder\TextMessageBuilder;
+use \LINE\LINEBot\MessageBuilder\ImageMessageBuilder;
 
 class BOT_API extends LINEBot {
 	
@@ -89,6 +90,15 @@ class BOT_API extends LINEBot {
         ]);
     }
 	
+    public function sendImageNew ($to = null, $originalContentUrl = null, $previewImageUrl = null) {
+        $messageBuilder = new ImageMessageBuilder($originalContentUrl,$previewImageUrl);
+        $this->response = $this->httpClient->post($this->endpointBase . '/v2/bot/message/push', [
+            'to' => $to,
+            // 'toChannel' => 'Channel ID,
+            'messages'  => $messageBuilder->buildMessage()
+        ]);
+    }
+
     public function replyMessageNew ($replyToken = null, $message = null) {
         $messageBuilder = new TextMessageBuilder($message);
         $this->response = $this->httpClient->post($this->endpointBase . '/v2/bot/message/reply', [
